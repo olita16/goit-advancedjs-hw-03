@@ -1,25 +1,53 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
-
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+.visible {
+    display: block;
+  }
+  
+  .loader,
+  .error {
+    display: none;
+  }
+  
+  .cat-info {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    width: 600px;
+  }
+  
+  .loader {
+    display: block;
+    position: relative;
+    height: 12px;
+    width: 80%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .loader::after {
+    content: '';
+    width: 40%;
+    height: 100%;
+    background: #a4929a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      left: 0;
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      left: 100%;
+      transform: translateX(0%);
+    }
+  }
+  
+  .breed-select {
+    display: none;
+  }
