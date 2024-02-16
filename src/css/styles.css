@@ -12,7 +12,9 @@
     display: flex;
     gap: 16px;
     width: 600px;
+    align-items: center;
   }
+  
   
   .loader {
     display: block;
